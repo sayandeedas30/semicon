@@ -1,0 +1,444 @@
+$date
+	Sun Sep 06 00:57:20 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_axi_stream_top $end
+$var wire 1 ! ext_s1_tready $end
+$var wire 1 " ext_s0_tready $end
+$var wire 1 # ext_m_tvalid $end
+$var wire 1 $ ext_m_tlast $end
+$var wire 64 % ext_m_tkeep [63:0] $end
+$var wire 512 & ext_m_tdata [511:0] $end
+$var reg 1 ' aclk $end
+$var reg 1 ( aresetn $end
+$var reg 1 ) ext_m_tready $end
+$var reg 512 * ext_s0_tdata [511:0] $end
+$var reg 64 + ext_s0_tkeep [63:0] $end
+$var reg 1 , ext_s0_tlast $end
+$var reg 1 - ext_s0_tvalid $end
+$var reg 512 . ext_s1_tdata [511:0] $end
+$var reg 64 / ext_s1_tkeep [63:0] $end
+$var reg 1 0 ext_s1_tlast $end
+$var reg 1 1 ext_s1_tvalid $end
+$var integer 32 2 fail_count [31:0] $end
+$var integer 32 3 pass_count [31:0] $end
+$scope module dut $end
+$var wire 1 ' aclk $end
+$var wire 1 ( aresetn $end
+$var wire 1 ) ext_m_tready $end
+$var wire 512 4 ext_s0_tdata [511:0] $end
+$var wire 64 5 ext_s0_tkeep [63:0] $end
+$var wire 1 , ext_s0_tlast $end
+$var wire 1 - ext_s0_tvalid $end
+$var wire 512 6 ext_s1_tdata [511:0] $end
+$var wire 64 7 ext_s1_tkeep [63:0] $end
+$var wire 1 0 ext_s1_tlast $end
+$var wire 1 1 ext_s1_tvalid $end
+$var wire 1 8 linkm_tvalid $end
+$var wire 1 9 linkm_tready $end
+$var wire 1 : linkm_tlast $end
+$var wire 64 ; linkm_tkeep [63:0] $end
+$var wire 512 < linkm_tdata [511:0] $end
+$var wire 1 = link1_tvalid $end
+$var wire 1 > link1_tready $end
+$var wire 1 ? link1_tlast $end
+$var wire 64 @ link1_tkeep [63:0] $end
+$var wire 512 A link1_tdata [511:0] $end
+$var wire 1 B link0_tvalid $end
+$var wire 1 C link0_tready $end
+$var wire 1 D link0_tlast $end
+$var wire 64 E link0_tkeep [63:0] $end
+$var wire 512 F link0_tdata [511:0] $end
+$var wire 1 ! ext_s1_tready $end
+$var wire 1 " ext_s0_tready $end
+$var wire 1 # ext_m_tvalid $end
+$var wire 1 $ ext_m_tlast $end
+$var wire 64 G ext_m_tkeep [63:0] $end
+$var wire 512 H ext_m_tdata [511:0] $end
+$scope module u_egress $end
+$var wire 1 ' aclk $end
+$var wire 1 ( aresetn $end
+$var wire 512 I m_tdata [511:0] $end
+$var wire 64 J m_tkeep [63:0] $end
+$var wire 1 $ m_tlast $end
+$var wire 1 ) m_tready $end
+$var wire 1 9 s_tready $end
+$var wire 1 8 s_tvalid $end
+$var wire 1 : s_tlast $end
+$var wire 64 K s_tkeep [63:0] $end
+$var wire 512 L s_tdata [511:0] $end
+$var reg 512 M data_reg [511:0] $end
+$var reg 64 N keep_reg [63:0] $end
+$var reg 1 O last_reg $end
+$var reg 1 # m_tvalid $end
+$upscope $end
+$scope module u_ingress0 $end
+$var wire 1 ' aclk $end
+$var wire 1 ( aresetn $end
+$var wire 512 P m_tdata [511:0] $end
+$var wire 64 Q m_tkeep [63:0] $end
+$var wire 1 D m_tlast $end
+$var wire 512 R s_tdata [511:0] $end
+$var wire 64 S s_tkeep [63:0] $end
+$var wire 1 , s_tlast $end
+$var wire 1 " s_tready $end
+$var wire 1 - s_tvalid $end
+$var wire 1 C m_tready $end
+$var reg 512 T data_reg [511:0] $end
+$var reg 64 U keep_reg [63:0] $end
+$var reg 1 D last_reg $end
+$var reg 1 B m_tvalid $end
+$upscope $end
+$scope module u_ingress1 $end
+$var wire 1 ' aclk $end
+$var wire 1 ( aresetn $end
+$var wire 512 V m_tdata [511:0] $end
+$var wire 64 W m_tkeep [63:0] $end
+$var wire 1 ? m_tlast $end
+$var wire 512 X s_tdata [511:0] $end
+$var wire 64 Y s_tkeep [63:0] $end
+$var wire 1 0 s_tlast $end
+$var wire 1 ! s_tready $end
+$var wire 1 1 s_tvalid $end
+$var wire 1 > m_tready $end
+$var reg 512 Z data_reg [511:0] $end
+$var reg 64 [ keep_reg [63:0] $end
+$var reg 1 ? last_reg $end
+$var reg 1 = m_tvalid $end
+$upscope $end
+$scope module u_interconnect $end
+$var wire 1 ' aclk $end
+$var wire 1 ( aresetn $end
+$var wire 1 9 m_tready $end
+$var wire 512 \ s0_tdata [511:0] $end
+$var wire 64 ] s0_tkeep [63:0] $end
+$var wire 1 D s0_tlast $end
+$var wire 1 C s0_tready $end
+$var wire 1 B s0_tvalid $end
+$var wire 512 ^ s1_tdata [511:0] $end
+$var wire 64 _ s1_tkeep [63:0] $end
+$var wire 1 ? s1_tlast $end
+$var wire 1 > s1_tready $end
+$var wire 1 = s1_tvalid $end
+$var wire 1 8 m_tvalid $end
+$var wire 1 : m_tlast $end
+$var wire 64 ` m_tkeep [63:0] $end
+$var wire 512 a m_tdata [511:0] $end
+$var reg 1 b grant $end
+$upscope $end
+$upscope $end
+$scope task check_equal $end
+$var reg 512 c actual [511:0] $end
+$var reg 512 d expected [511:0] $end
+$var reg 256 e test_name [255:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx e
+bx d
+bx c
+xb
+bx a
+bx `
+bx _
+bx ^
+bx ]
+bx \
+bx [
+bx Z
+b0 Y
+b0 X
+bx W
+bx V
+bx U
+bx T
+b0 S
+b0 R
+bx Q
+bx P
+xO
+bx N
+bx M
+bx L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+xD
+xC
+xB
+bx A
+bx @
+x?
+x>
+x=
+bx <
+bx ;
+x:
+x9
+x8
+b0 7
+b0 6
+b0 5
+b0 4
+b0 3
+b0 2
+01
+00
+b0 /
+b0 .
+0-
+0,
+b0 +
+b0 *
+0)
+0(
+0'
+bx &
+bx %
+x$
+x#
+x"
+x!
+$end
+#5000
+1C
+0>
+1"
+1!
+b0 <
+b0 L
+b0 a
+b0 ;
+b0 K
+b0 `
+0:
+08
+19
+0D
+b0 E
+b0 Q
+b0 U
+b0 ]
+b0 F
+b0 P
+b0 T
+b0 \
+0B
+0?
+b0 @
+b0 W
+b0 [
+b0 _
+b0 A
+b0 V
+b0 Z
+b0 ^
+0=
+0b
+0$
+0O
+b0 %
+b0 G
+b0 J
+b0 N
+b0 &
+b0 H
+b0 I
+b0 M
+0#
+1'
+#10000
+0'
+#15000
+1'
+#20000
+1)
+1(
+0'
+#25000
+1'
+#30000
+1-
+1,
+b1111111111111111111111111111111111111111111111111111111111111111 +
+b1111111111111111111111111111111111111111111111111111111111111111 5
+b1111111111111111111111111111111111111111111111111111111111111111 S
+b10101010101010100001000100010001 *
+b10101010101010100001000100010001 4
+b10101010101010100001000100010001 R
+0'
+#35000
+18
+1:
+b1111111111111111111111111111111111111111111111111111111111111111 ;
+b1111111111111111111111111111111111111111111111111111111111111111 K
+b1111111111111111111111111111111111111111111111111111111111111111 `
+b10101010101010100001000100010001 <
+b10101010101010100001000100010001 L
+b10101010101010100001000100010001 a
+1B
+1D
+b1111111111111111111111111111111111111111111111111111111111111111 E
+b1111111111111111111111111111111111111111111111111111111111111111 Q
+b1111111111111111111111111111111111111111111111111111111111111111 U
+b1111111111111111111111111111111111111111111111111111111111111111 ]
+b10101010101010100001000100010001 F
+b10101010101010100001000100010001 P
+b10101010101010100001000100010001 T
+b10101010101010100001000100010001 \
+1'
+#40000
+0,
+0-
+0'
+#45000
+08
+0B
+1#
+1$
+1O
+b1111111111111111111111111111111111111111111111111111111111111111 %
+b1111111111111111111111111111111111111111111111111111111111111111 G
+b1111111111111111111111111111111111111111111111111111111111111111 J
+b1111111111111111111111111111111111111111111111111111111111111111 N
+b10101010101010100001000100010001 &
+b10101010101010100001000100010001 H
+b10101010101010100001000100010001 I
+b10101010101010100001000100010001 M
+1'
+#50000
+0'
+#55000
+0#
+1'
+#60000
+0'
+#65000
+1'
+#70000
+0'
+#75000
+b1 3
+b111010000110000001000000110010101101110011001000010110101110100011011110010110101100101011011100110010000100000011101000110100001110010011011110111010101100111011010000010000001100110011101010110110001101100001000000110001101101000011000010110100101101110 e
+b10101010101010100001000100010001 d
+b10101010101010100001000100010001 c
+1'
+#80000
+11
+10
+b1111111111111111111111111111111111111111111111111111111111111111 /
+b1111111111111111111111111111111111111111111111111111111111111111 7
+b1111111111111111111111111111111111111111111111111111111111111111 Y
+b10111011101110110011001100110011 .
+b10111011101110110011001100110011 6
+b10111011101110110011001100110011 X
+1-
+1,
+b11001100110011000010001000100010 *
+b11001100110011000010001000100010 4
+b11001100110011000010001000100010 R
+0'
+#85000
+18
+b11001100110011000010001000100010 <
+b11001100110011000010001000100010 L
+b11001100110011000010001000100010 a
+0!
+1B
+b11001100110011000010001000100010 F
+b11001100110011000010001000100010 P
+b11001100110011000010001000100010 T
+b11001100110011000010001000100010 \
+1=
+1?
+b1111111111111111111111111111111111111111111111111111111111111111 @
+b1111111111111111111111111111111111111111111111111111111111111111 W
+b1111111111111111111111111111111111111111111111111111111111111111 [
+b1111111111111111111111111111111111111111111111111111111111111111 _
+b10111011101110110011001100110011 A
+b10111011101110110011001100110011 V
+b10111011101110110011001100110011 Z
+b10111011101110110011001100110011 ^
+1'
+#90000
+0,
+0-
+0'
+#95000
+1!
+1>
+0C
+b10111011101110110011001100110011 <
+b10111011101110110011001100110011 L
+b10111011101110110011001100110011 a
+1#
+b11001100110011000010001000100010 &
+b11001100110011000010001000100010 H
+b11001100110011000010001000100010 I
+b11001100110011000010001000100010 M
+1b
+0B
+1'
+#100000
+0'
+#105000
+b10111011101110110011001100110011 &
+b10111011101110110011001100110011 H
+b10111011101110110011001100110011 I
+b10111011101110110011001100110011 M
+1'
+#110000
+0'
+#115000
+1'
+#120000
+0'
+#125000
+1'
+#130000
+0'
+#135000
+1'
+#140000
+0'
+#145000
+1'
+#150000
+0'
+#155000
+1'
+#160000
+0'
+#165000
+b10 3
+b111010000110001001000000110010101101110011001000010110101110100011011110010110101100101011011100110010000100000011000010110011001110100011001010111001000100000011001110111001001100001011011100111010000100000011100110111011101101001011101000110001101101000 e
+b10111011101110110011001100110011 d
+b10111011101110110011001100110011 c
+00
+01
+1'
+#170000
+0'
+#175000
+08
+0=
+1'
+#180000
+0'
+#185000
+0#
+1'

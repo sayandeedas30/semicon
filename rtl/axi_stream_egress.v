@@ -15,7 +15,7 @@ module axi_stream_egress (
     input  wire         m_tready
 );
 
-    // Internal storage registers (the "1-deep buffer")
+    // buffer registers
     reg [511:0] data_reg;
     reg [63:0]  keep_reg;
     reg         last_reg;
@@ -55,7 +55,6 @@ module axi_stream_egress (
                 m_tvalid <= 1'b1;
             end
             // Case 3: buffer full, downstream not ready -> hold state
-            // (implicit: registers keep their values, no else needed)
         end
     end
 

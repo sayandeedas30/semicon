@@ -2,14 +2,14 @@ module axi_stream_ingress (
     input  wire         aclk,
     input  wire         aresetn,     
 
-    // Slave side (data coming IN from outside world)
+    //Slave
     input  wire [511:0] s_tdata,
     input  wire [63:0]  s_tkeep,
     input  wire         s_tlast,
     input  wire         s_tvalid,
     output wire         s_tready,
 
-    // Master side (data going OUT to interconnect)
+    //Master
     output wire [511:0] m_tdata,
     output wire [63:0]  m_tkeep,
     output wire         m_tlast,
@@ -17,7 +17,7 @@ module axi_stream_ingress (
     input  wire         m_tready
 );
 
-    // Internal storage registers (the "1-deep buffer")
+    //buffer reg
     reg [511:0] data_reg;
     reg [63:0]  keep_reg;
     reg         last_reg;
@@ -57,7 +57,6 @@ module axi_stream_ingress (
                 m_tvalid <= 1'b1;
             end
             // Case 3: buffer full, downstream not ready -> hold state
-            // (implicit: registers keep their values, no else needed)
         end
     end
 
