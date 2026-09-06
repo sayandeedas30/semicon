@@ -79,6 +79,7 @@ module tb_axi_stream_egress;
         m_tready = 0;
 
         @(posedge aclk);
+        @(posedge aclk);
         if (m_tvalid === 1'b0)
             $display("[PASS] Test1 reset: m_tvalid is 0 after reset");
         else
