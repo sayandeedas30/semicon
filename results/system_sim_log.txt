@@ -1,0 +1,10 @@
+VCD info: dumpfile sim/wave_system.vcd opened for output.
+[PASS] Reset: all lanes held at 0
+[PASS] System: lane0 final symbols
+[PASS] System: lane1 final symbols
+[PASS] System: lane2 final symbols
+[PASS] System: lane3 final symbols
+--------------------------------------------------
+TEST SUMMARY: 4 PASS, 0 FAIL
+--------------------------------------------------
+tb\tb_system_top.v:165: $finish called at 215000 (1ps)

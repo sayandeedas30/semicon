@@ -1,0 +1,7 @@
+VCD info: dumpfile sim/wave_top.vcd opened for output.
+[PASS] t0 end-to-end through full chain
+[PASS] t1 end-to-end after grant switch
+--------------------------------------------------
+TEST SUMMARY: 2 PASS, 0 FAIL
+--------------------------------------------------
+tb\tb_axi_stream_top.v:149: $finish called at 185000 (1ps)

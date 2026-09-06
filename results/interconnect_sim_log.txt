@@ -1,0 +1,14 @@
+VCD info: dumpfile sim/wave_interconnect.vcd opened for output.
+[PASS] st1 input0-only passthrough data
+[PASS] till 0 and no prior tlast switch
+[PASS]  now granted and passing through
+[PASS] hile grant=1 and both requesting
+[PASS] st3 s1_tready high since grant=1
+[PASS] grant still on input1 mid-packet
+[PASS] l gated out mid-packet on input1
+[PASS] t switched to input0 after tlast
+[PASS]  s0_tready now high after switch
+--------------------------------------------------
+TEST SUMMARY: 9 PASS, 0 FAIL
+--------------------------------------------------
+tb\tb_axi_stream_interconnect.v:214: $finish called at 150000 (1ps)
